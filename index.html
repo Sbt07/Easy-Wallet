@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Wallet</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" style="border-radius: 50%;">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="sub-container">
+                <!---Budget-->
+                <div class="total-amount-container">
+                    <h3>Budget</h3>
+                    <p class="hide error" id="budget-error">Value can't be empty or negative.</p>
+                    <input type="number" name="" placeholder="Enter Total Amount" id="total-amount"/>
+                    <button class="submit" id="total-amount-button">Set Budget</button>
+                </div>
+
+
+                <!--Expenditure-->
+                <div class="user-amount-container">
+                    <h3>Expenses</h3>
+                    <p class="hide error" id="product-title-error">Value can't be empty or negative.</p>
+                    <input type="text" class="product-title" placeholder="Enter Title" id="product-title"/>
+                    <input type="number" name="" id="user-amount" placeholder="Enter cost">
+                    <button class="submit" id="check-amount">Add</button>
+                </div>
+            </div>
+            <!----Output-->
+            <div class="output-container flex-space">
+                <div>
+                    <p>Total Budget</p>
+                    <span id="amount">0</span>
+                </div>
+                <div>
+                    <p>Expenses</p>
+                    <span id="expenditure-value">0</span>
+                </div>
+                <div>
+                    <p>balance</p>
+                    <span id="balance-amount">0</span>
+                </div>
+            </div>
+        </div>
+        <!---List-->
+        <div class="list">
+            <h3>Expenses</h3>
+            <div class="list-container" id="list"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

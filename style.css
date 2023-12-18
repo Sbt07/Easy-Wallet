@@ -1,0 +1,137 @@
+:root{
+    --light-blue : #a0b6f0;
+    --black: #444;
+    --blue: #6082e1;
+    --box-shadow: 0 .4em .8em rgba(0,0,0,.1);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Crimson Pro', serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+    font-weight: 400;
+}
+body{
+    background: #f3f6fd;
+}
+.wrapper{
+    width: 90%;
+    font-size: 16px;
+    max-width: 43.75em;
+    margin: 1em auto;
+}
+.container{
+    width: 100%;
+}
+.sub-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex-space{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper h3{
+    color: var(--black);
+    font-weight: 500;
+    margin-bottom: 0.6em;
+}
+.container input{
+    display: block;
+    width: 100%;
+    padding: .6em .3em;
+    border: 1px solid #999;
+    border-radius: 8px;
+    color: var(--black);
+    outline: none;
+    font-weight: 400;
+    margin-bottom: .6em;
+}
+.container input:focus{
+    border-color: #222;
+}
+.total-amount-container, .user-amount-container{
+    background: #fff;
+    padding: 1.25em .9em;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+.output-container{
+    background: var(--blue);
+    color: #fff;
+    border-radius: .3em;
+    box-shadow: var(--box-shadow);
+    margin: 2em 0;
+    padding: 1.2em;
+}
+.output-container p{
+    font-weight: 500;
+    margin-bottom: .6em;
+}
+.output-container span{
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: #f3f6fd;
+}
+.submit{
+    font-size: 1em;
+    margin-top: .8em;
+    background: var(--blue);
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: .6em 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.submit:hover{
+    background: #1d3f9b;
+}
+.list{
+    background: #fff;
+    padding: 1.8em 1.2em;
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+}
+.hide{
+    display: none;
+}
+.error{
+    color: red;
+}
+.edit{
+    margin-left: auto;
+}
+.edit, .delete{
+    background: transparent;
+    cursor: pointer;
+    margin-right: 1.5em;
+    border: none;
+    color: var(--blue);
+}
+
+
+@media screen and (max-width: 600px){
+    .wrapper{
+        font-size: 14px;
+    }
+    .sub-container{
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+}
