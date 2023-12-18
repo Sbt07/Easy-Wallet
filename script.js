@@ -98,6 +98,7 @@ const listCreator = (expenseName, expenseValue) => {
   sublistContent.classList.add("sublist-content", "flex-space");
   list.appendChild(sublistContent);
   sublistContent.innerHTML = `<p class="product">${expenseName}</p><p class="amount">${expenseValue}</p>`;
+  sublistContent.style.marginBottom = "12px";
   let editButton = document.createElement("button");
   editButton.classList.add("fa-solid", "fa-pen-to-square", "edit");
   editButton.style.fontSize = "1.2em";
